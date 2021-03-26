@@ -1,0 +1,74 @@
+html {
+  background: #080808;
+  text-align: center;
+  overflow: hidden;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+}
+
+a {
+  color: #c91200;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#text {
+  position: relative;
+  margin-bottom: 4em;
+}
+
+#text > p {
+  margin: 0;
+  line-height: 1;
+  color: #c91200;
+}
+
+#text > p:nth-child(1) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 6em;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #f5d0cdea;
+  pointer-events: none;
+}
+
+@keyframes pop {
+  0%,
+  5% {
+    -webkit-text-stroke-color: #f5d0cdea;
+  }
+  40%,
+  100% {
+    -webkit-text-stroke-color: #f5d0cd5a;
+  }
+}
+
+#text > p:nth-child(1) span {
+  -webkit-text-stroke-color: #f5d0cd18;
+  animation: pop 5s infinite;
+}
+
+#text > p:nth-child(2) {
+  font-family: "DM Serif Display", serif;
+  font-size: 7em;
+}
+
+#text > p:nth-child(3) {
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.8em;
+}

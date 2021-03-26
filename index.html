@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>dzstara</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="favicon.png" />
+    <link rel="stylesheet" href="style/homepage.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans+JP:wght@900&family=Work+Sans&display=swap"
+    />
+  </head>
+  <body>
+    <div id="text">
+      <p aria-hidden="true">ディザスタラ</p>
+      <p>dzstara</p>
+      <p aria-hidden="true">DEE &middot; ZAH &middot; STAH &middot; RAH</p>
+    </div>
+
+    <div id="description">
+      I create "content" on <a href="https://twitch.tv/dzstara">Twitch</a>.
+    </div>
+
+    <script>
+      window.addEventListener("load", () => {
+        const jp = document.querySelector("p:nth-child(1)");
+
+        const content = jp.innerHTML;
+        jp.innerHTML = "";
+
+        content.split("").forEach((letter, i, array) => {
+          const element = document.createElement("span");
+          element.innerHTML = letter;
+          element.style.animationDelay = `${(i * 1.5) / array.length}s`;
+          jp.appendChild(element);
+        });
+      });
+    </script>
+  </body>
+</html>
